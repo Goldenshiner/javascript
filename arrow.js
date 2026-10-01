@@ -40,5 +40,3 @@ console.log(sumTwo(3,7)); //10
 const plusTwo= (num1, num2) => ({username: "swarna"}) //to show any object you have to declare it using parenthisis.
 
 console.log(plusTwo(3,7)); //{ username: 'swarna' }
-
-
