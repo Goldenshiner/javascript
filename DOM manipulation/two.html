@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        body{
+            background-color:rgb(70, 157, 179);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="week">
+        <div class="day">sunday</div>
+        <div class="day">monday</div>
+        <div class="day">wednesday</div>
+        <div class="day">friday</div>
+    </div>
+    
+</body>
+<script>
+    const week= document.querySelector('.week')
+    // console.log(week);
+    // console.log(week.children);
+    // console.log(week.children[1].innerHTML);
+
+    // for (let i = 0; i < week.children.length; i++) {
+    //     console.log(week.children[i].innerHTML); 
+    // }
+
+    // console.log(week.firstElementChild.innerHTML); // sunday
+    // console.log(week.lastElementChild.innerHTML); // friday
+
+    const dayOne= document.querySelector('.day');
+    console.log(dayOne.parentElement.className); // week
+    console.log(dayOne.nextElementSibling.innerHTML); // monday
+    console.log(dayOne.previousElementSibling); // null
+    console.log("NODES: ", week.childNodes);
+</script>
+</html>
