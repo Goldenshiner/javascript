@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languageName){
+        const li= document.createElement('li');
+        li.innerHTML= languageName;
+        const ul= document.querySelector('.language');
+        ul.appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('C++');
+
+    //edit 
+    document.querySelector('.language').children[1].innerHTML= 'ruby';
+
+    document.querySelector('.language').children[0].innerHTML= 'typescript';
+
+    //remove
+    document.querySelector('.language').children[2].remove();
+</script>
+</html>
