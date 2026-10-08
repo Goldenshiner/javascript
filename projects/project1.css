@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Container for all four boxes */
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    padding-top: 120px;
+}
+
+/* Common design of every box */
+.button {
+    width: 190px;
+    height: 180px;
+
+    border: 2px solid #222;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Pink box */
+#pink {
+    background-color: pink;
+}
+
+/* Yellow box */
+#yellow {
+    background-color: yellow;
+}
+
+/* Blue box */
+#blue {
+    background-color: lightblue;
+}
+
+/* Orange box */
+#orange {
+    background-color: orange;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-top: 130px;
+
+    font-size: 28px;
+    color: #222;
+}
