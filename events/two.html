@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Swarnaprava sahoo</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeMe= setTimeout(function(){ 
+        document.querySelector('h1').innerHTML = "I won't give up"
+    }, 2000)
+
+    document.getElementById('stop').style.cursor= "pointer"
+
+    document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+    }) 
+</script>
+</html>
