@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: bisque; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card{
+            height: 400px;
+            width: 250ppx; 
+        }
+
+        button{
+            height: 30px;
+            width: 50px;
+            margin-top:5px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+
+        .card-image{
+            height: 280px;
+            width: 247px;
+            object-fit: cover;
+            border-radius: 10% 10% 0% 0%;
+        }
+
+        .card-title{
+            height:20px; 
+            text-align: center;
+        }
+
+        .card-follower{
+            height:25px;
+            text-align: center;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="" alt="card image" class="card-image"> 
+        <div class="card-body">
+            <h2 class="card-title"></h2>
+            <div class="card-follower"></div>
+            <button id="show">show</button>
+        </div>
+    </div>
+</body>
+<script>
+    const btn= document.querySelector('#show');
+    btn.addEventListener('click',function(){
+        var xhr= new XMLHttpRequest();
+        xhr.open('GET','https://api.github.com/users/hiteshchoudhary')
+        xhr.onreadystatechange= function(){
+            if (xhr.readyState === 4){
+                const data= JSON.parse(xhr.responseText);
+                const pic= document.querySelector('.card-image');
+                const userName= document.querySelector('.card-title');
+                const followers= document.querySelector('.card-follower');
+
+                pic.src= data.avatar_url;
+                userName.innerHTML= data.name;
+                followers.innerHTML= 'followers: '+ data.followers;
+            }
+        }
+        xhr.send();
+    })
+</script>
+</html>
